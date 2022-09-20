@@ -7,13 +7,7 @@ for (i = 0; i < myNodelist.length; i++) {
   myNodelist[i].appendChild(span);
 }
 
-var unchecked = document.getElementsByClassName("unchecked");
 var close = document.getElementsByClassName("close");
-
-// function checkElement(){
-//   var checkValue = document.getElementsByClassName("unchecked").value;
-//   alert(checkValue);
-// }
 
 // Removes list items when you click X
 function removeElement() {
@@ -28,18 +22,29 @@ function removeElement() {
 // Clicking on the "Add" button adds a new list item
 function newElement() {
   var li = document.createElement("li");
+  li.className = "task";
+  var label = document.createElement("label");
+  label.id = "1";
+  li.appendChild(label);
   var inputValue = document.getElementById("todo").value;
   var t = document.createTextNode(inputValue);
-  li.appendChild(t);
+  var taskName = document.createElement("p");
+  var checkboxEl = document.createElement("input");
+  checkboxEl.type = "checkbox";
+  checkboxEl.className = "checkbox";
+  checkboxEl.id = "1";
+  label.appendChild(checkboxEl);
+  taskName.appendChild(t);
+  label.appendChild(taskName);
   if (inputValue === '') {
     alert("Your to-do goal cannot be left blank");
   } else {
     document.getElementById("list").appendChild(li);
   }
   document.getElementById("todo").value = "";
-
 // show close button and deletes a list item when clicked
   var span = document.createElement("SPAN");
+  console.log("close button");
   var txt = document.createTextNode("\u00D7");
   span.className = "close";
   span.appendChild(txt);

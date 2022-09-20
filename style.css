@@ -18,33 +18,43 @@
     background-color: rgb(155, 238, 155);
 }
 
+.task-box {
+  padding-left: 0px;
+}
+
+input[type="checkbox"]:checked + p {
+  text-decoration: line-through;
+}
+
+p{
+  padding-top: 13px;
+  padding-left: 13px;
+}
+
+.task label {
+  display:flex;
+}
+
 ul li {
     cursor: pointer;
     position: relative;
-    padding: 10px 8px 10px 12px;
+    padding: 10px 0px 0px 8px;
     background: transparent;
     font-size: 18px;
     transition: 0.2s;
+    list-style: none;
 }
 
 ul li:hover {
   background: rgb(140, 214, 140);
 }
 
-/* Strike through list item when checked */
-ul li.checked {
-  text-decoration: line-through;
-}
-
-ul li.unchecked {
-  text-decoration: none;
-}
-  
 .itemlist{
   padding-top: 45px;
 }
 #todo{
   background-color: rgb(183, 248, 183);
+  width: 75%;
 }
 
 .additem{
@@ -55,7 +65,6 @@ input {
   margin: 0;
   border: none;
   border-radius: 0;
-  width: 75%;
   padding: 10px;
   float: left;
   font-size: 16px;
@@ -84,7 +93,7 @@ input {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 12px 16px 12px 16px;
+  padding: 29px 12px 10px 12px;
 }
 
 .close:hover {
