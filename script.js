@@ -7,6 +7,20 @@ for (i = 0; i < myNodelist.length; i++) {
   myNodelist[i].appendChild(span);
 }
 
+// starting the confetti animation when task is completed
+const start = () => {
+  setTimeout(function() {
+      confetti.start()
+  }, 500);
+};
+
+// stopping the confetti animation after the task is completed
+const stop = () => {
+  setTimeout(function() {
+      confetti.stop()
+  }, 1000); // stops after 3 second
+};
+
 var close = document.getElementsByClassName("close");
 
 // Removes list items when you click X
@@ -15,6 +29,8 @@ function removeElement() {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
+      start();
+      stop();
     }
   }
 }
@@ -54,6 +70,8 @@ function newElement() {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
+      start();
+      stop();
     }
   }
 }
