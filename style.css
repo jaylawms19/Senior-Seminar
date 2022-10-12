@@ -2,16 +2,60 @@
     background-color: lightblue;
     text-align-last: center;
     height: 25px;
+    max-width: 1350px;
+    position:absolute;
+    z-index: 3;
 }
+
+.container {
+  max-width: 1350px;
+}
+
 .row{
     height:50px;
 }
-#s{
-    padding: 0 16px;
-    background-color: bisque;
+
+#s .sec-title {
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+  background: bisque;
+  width: 418px;
+  height: 55px;
+  text-align: center;
+  padding-top: 28px;
 }
+
+#t .sec-title {
+  position:fixed;
+  top: 0px;
+  z-index: 2;
+  background: rgb(155, 238, 155);
+  width: 418px;
+  height: 55px;
+  text-align: center;
+  padding-top: 28px;
+}
+
+#n .sec-title {
+  position:fixed;
+  top: 0px;
+  z-index: 2;
+  background: lavender;
+  width: 418px;
+  height: 55px;
+  text-align: center;
+  padding-top: 28px;
+}
+
+#s{
+  padding: 0 16px;
+  background-color: bisque;
+}
+
 .scheduling{
   padding-left: 30px;
+  padding-top: 18px;
 }
 #t{
     padding: 0 16px;
@@ -38,6 +82,7 @@ p{
 ul li {
     cursor: pointer;
     position: relative;
+    z-index: 1;
     padding: 10px 0px 0px 8px;
     background: transparent;
     font-size: 18px;
@@ -58,7 +103,7 @@ ul li:hover {
 }
 
 .additem{
-  padding-top: 10px;
+  padding-top: 29px;
 }
 
 input {
@@ -110,4 +155,5 @@ input {
     background-color: transparent;
     border: none;
     outline: none;
+    padding-top: 28px;
 }
