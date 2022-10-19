@@ -8,11 +8,19 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <script src="confetti.js"></script>
+    <!-- <script src="calendar.js"></script> -->
     <title>Portable Planner</title>
 </head>
 <body>
     <div class="container-lg">
         P O R T A B L E P L A N N E R
+      </div>
+      <div class="calendar">
+        <div class="flex-container">
+                <span onclick="previous()" class="arrow" id="prevDate"> < </span>
+                <p id="date">The date is </p>
+                <span onclick="next()" class="arrow" id="nextDate"> > </span>
+        </div>
       </div>
       <div class="container">
         <div class="row">
@@ -166,4 +174,5 @@
         </div>
       </div>
 </body>
+<script src="calendar.js"></script>
 </html>

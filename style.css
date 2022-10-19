@@ -15,37 +15,73 @@
     height:50px;
 }
 
+.flex-container {
+  display: flex;
+}
+
+.calendar{
+  padding-top: 20px;
+  font-size: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.arrow {
+  padding-top: 13px;
+}
+
+.arrow:hover {
+  cursor:pointer;
+  background: #bbb;
+}
+
+#prevDate {
+  margin: 0px 10px;
+  width: 5%;
+  text-align: center;
+}
+
+#nextDate {
+  margin: 0px 10px;
+  width: 5%;
+  text-align: center;
+}
+
+#date {
+  text-align: center;
+  width: 95%;
+}
+
 #s .sec-title {
-  position: fixed;
-  top: 0px;
+  position: absolute;
+  top: 111px;
   z-index: 2;
   background: bisque;
   width: 418px;
   height: 55px;
   text-align: center;
-  padding-top: 28px;
+  padding-top: 14px;
 }
 
 #t .sec-title {
-  position:fixed;
-  top: 0px;
+  position:absolute;
+  top: 111px;
   z-index: 2;
   background: rgb(155, 238, 155);
   width: 418px;
   height: 55px;
   text-align: center;
-  padding-top: 28px;
+  padding-top: 14px;
 }
 
 #n .sec-title {
-  position:fixed;
-  top: 0px;
+  position:absolute;
+  top: 111px;
   z-index: 2;
   background: lavender;
   width: 418px;
   height: 55px;
   text-align: center;
-  padding-top: 28px;
+  padding-top: 14px;
 }
 
 #s{
