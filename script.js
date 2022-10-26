@@ -43,6 +43,7 @@ function newElement() {
   label.id = "1";
   li.appendChild(label);
   var inputValue = document.getElementById("todo").value;
+  // console.log(inputValue);
   var t = document.createTextNode(inputValue);
   var taskName = document.createElement("p");
   var checkboxEl = document.createElement("input");
@@ -55,7 +56,16 @@ function newElement() {
   if (inputValue === '') {
     alert("Your to-do goal cannot be left blank");
   } else {
+    console.log(inputValue);
+    let todos = JSON.parse(localStorage.getItem("todo-list"));
+    if (!todos) {
+      todos = [];
+    }
+    let taskInfo = {name: inputValue, status: "pending"};
+    todos.push(taskInfo);
+    localStorage.setItem("todo-list", JSON.stringify(todos));
     document.getElementById("list").appendChild(li);
+    // showTodo();
   }
   document.getElementById("todo").value = "";
 // show close button and deletes a list item when clicked
@@ -75,3 +85,30 @@ function newElement() {
     }
   }
 }
+
+// saving todo items in local storage
+
+// const taskInput = document.querySelector(".additem input");
+// taskInput.addEventListener("keyup", e => {
+//   let userTask = taskInput.value;
+//   if(e.key == "Enter" && userTask) {
+//     console.log(userTask);
+//   }
+// })
+
+// taskBox = document.querySelector(".task-box");
+
+// function showTodo() {
+//   let li = "";
+//   todos.forEach((todo, id) => {
+//     li += `<li class="task">
+//                 <label id="${id}">
+//                     <input type="checkbox" class= "checkbox" id="${id}">
+//                     <p>${todo.name}</p>
+//                 </label>
+//                 <span onclick="removeElement()" class="close">×</span>
+//             </li>`;
+//   })
+//   taskBox.innerHTML = li;
+// }
+// showTodo();
