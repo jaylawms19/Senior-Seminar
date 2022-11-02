@@ -35,6 +35,31 @@ function removeElement() {
   }
 }
 
+let todos = JSON.parse(localStorage.getItem("todo-list"));
+// taskBox = document.querySelector(".task-box");
+
+
+// const taskInput = document.querySelector(".additem input"),
+// taskBox = document.querySelector(".task-box");
+// console.log(taskBox, "yeah");
+
+// let todos = JSON.parse(localStorage.getItem("todo-list"));
+
+// function showTodo() {
+//   let li = "";
+//   todos.forEach((todo, id) => {
+//     li += `<li class="task">
+//                 <label id="${id}">
+//                     <input type="checkbox" class= "checkbox" id="${id}">
+//                     <p>${todo.name}</p>
+//                 </label>
+//                 <span onclick="removeElement()" class="close">×</span>
+//             </li>`;
+//   });
+//   taskBox.innerHTML = li;
+// }
+// showTodo();
+
 // Clicking on the "Add" button adds a new list item
 function newElement() {
   var li = document.createElement("li");
@@ -57,7 +82,7 @@ function newElement() {
     alert("Your to-do goal cannot be left blank");
   } else {
     console.log(inputValue);
-    let todos = JSON.parse(localStorage.getItem("todo-list"));
+    // let todos = JSON.parse(localStorage.getItem("todo-list"));
     if (!todos) {
       todos = [];
     }
@@ -88,27 +113,44 @@ function newElement() {
 
 // saving todo items in local storage
 
-// const taskInput = document.querySelector(".additem input");
-// taskInput.addEventListener("keyup", e => {
-//   let userTask = taskInput.value;
-//   if(e.key == "Enter" && userTask) {
+//const taskInput = document.querySelector(".additem input");
+// const taskInput = document.querySelector(".addBtn enter");
+
+
+// inputValue.addEventListener("keyup", e => {
+//   let userTask = inputValue;
+//   if(e.key == "Enter") {
 //     console.log(userTask);
+//   }
+// })
+
+
+// inputValue.addEventListener("keyup", e => {
+//   console.log(inputValue, "howdy");
+//   if(e.key == "Enter" && inputValue) {
+//     // if(e.key == userTask) {
+//     console.log(userTask, "partner");
 //   }
 // })
 
 // taskBox = document.querySelector(".task-box");
 
 // function showTodo() {
-//   let li = "";
-//   todos.forEach((todo, id) => {
-//     li += `<li class="task">
-//                 <label id="${id}">
-//                     <input type="checkbox" class= "checkbox" id="${id}">
-//                     <p>${todo.name}</p>
-//                 </label>
-//                 <span onclick="removeElement()" class="close">×</span>
-//             </li>`;
+//   todos.forEach((todo,id) => {
+//     console.log(id, todo);
 //   })
-//   taskBox.innerHTML = li;
+
+
+  // let li = "";
+  // todos.forEach((todo, id) => {
+  //   li += `<li class="task">
+  //               <label id="${id}">
+  //                   <input type="checkbox" class= "checkbox" id="${id}">
+  //                   <p>${todo.name}</p>
+  //               </label>
+  //               <span onclick="removeElement()" class="close">×</span>
+  //           </li>`;
+  // })
+  // taskBox.innerHTML = li;
 // }
 // showTodo();

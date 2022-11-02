@@ -25,6 +25,16 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.flex-container > .october{
+  background-image: url("https://media.istockphoto.com/vectors/seamless-pattern-with-funny-silhouettes-of-pumpkins-vector-vector-id1039573390?k=20&m=1039573390&s=612x612&w=0&h=82bDog5OfWSTaxZNELbSlyh8vjn7ii8itj4N3AMFRas=");
+  color: white;
+}
+
+.flex-container > .november{
+  background-image: url("https://t3.ftcdn.net/jpg/04/40/03/38/360_F_440033879_EycRk7KSlYsNk6wdtvrqk3nRgMhIkWFp.jpg");
+  color: white;
+}
+
 .arrow {
   padding-top: 13px;
 }
