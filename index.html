@@ -18,7 +18,7 @@
       <div class="calendar">
         <div class="flex-container">
                 <span onclick="previous()" class="arrow" id="prevDate"> < </span>
-                <p class="october" id="date"></p>
+                <p class="none" id="date"></p>
                 <span onclick="next()" class="arrow" id="nextDate"> > </span>
         </div>
       </div>
@@ -129,6 +129,9 @@
                 <input type="text" id="todo" placeholder="Add item">
                 <span onclick="newElement()" class="addBtn">Add</span>
             </div>
+            <!-- <div class="clear-items">
+                <span onclick="clear()" class="clearBtn">Clear list</span>
+            </div> -->
             <div class="itemlist">
                 <ul class="task-box" id="list">
                     <li class="task">
@@ -160,6 +163,9 @@
                         <span onclick="removeElement()" class="close">×</span>
                     </li>
                 </ul>
+                <div class="clear-items">
+                    <span onclick="clearAll()" class="clearBtn">Clear list</span>
+                </div>
             </div>
           </div>
           <div class="col" id="n">

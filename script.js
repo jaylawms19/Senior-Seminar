@@ -111,6 +111,11 @@ function newElement() {
   }
 }
 
+function clearAll() {
+  console.log("clear clicked");
+  document.getElementById("list").innerHTML = "";
+}
+
 // saving todo items in local storage
 
 //const taskInput = document.querySelector(".additem input");

@@ -16,7 +16,7 @@
 }
 
 .flex-container {
-  display: flex;
+  display:flex;
 }
 
 .calendar{
@@ -25,15 +25,68 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.flex-container > .october{
-  background-image: url("https://media.istockphoto.com/vectors/seamless-pattern-with-funny-silhouettes-of-pumpkins-vector-vector-id1039573390?k=20&m=1039573390&s=612x612&w=0&h=82bDog5OfWSTaxZNELbSlyh8vjn7ii8itj4N3AMFRas=");
+.flex-container:has(.January) {
+  background-image: url("https://www.history.com/.image/t_share/MTY1MTk4ODk4MjU4NzgxNzY5/july-4-fireworks-gettyimages-530944604.jpg");
   color: white;
 }
 
-.flex-container > .november{
+.flex-container:has(.February) {
+  background-image: url("https://www.winni.in/celebrate-relations/wp-content/uploads/2018/01/Valentines-Day-Hearts-Credit-iStock-455773449.jpg");
+  color: black;
+}
+
+.flex-container:has(.March) {
+  background-image: url("https://image.shutterstock.com/image-vector/happy-st-patricks-day-horizontal-260nw-2131261879.jpg");
+  color: white;
+}
+
+.flex-container:has(.April) {
+  background-image: url("https://www.rd.com/wp-content/uploads/2020/04/easter-eggs-GettyImages-1297753369.jpg?fit=700,1024");
+  color: black;
+}
+
+.flex-container:has(.May) {
+  background-image: url("https://img.freepik.com/premium-photo/bright-floral-banner-colorful-flowers-white-background-as-backdrop-texture-spring-summer-wallpaper-your-design-top-view-flat-lay_75163-3275.jpg");
+  background-size: cover;
+  color: black;
+}
+
+.flex-container:has(.June) {
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20190222/ourmid/pngtree-fresh-cartoon-beach-sand-summer-background-design-backgroundbeach-backgroundwedding-backgroundwedding-image_54112.jpg");
+  background-size: cover;
+  color: black;
+}
+
+.flex-container:has(.July) {
+  background-image: url("https://media.istockphoto.com/id/1316746082/vector/barbecue-party-in-the-backyard-with-fence.jpg?s=612x612&w=0&k=20&c=Ou2vl9mEl9XaWwfU93sF6sFrOpkZp80CLU4qCqr5hNg=");
+  color: black;
+}
+
+.flex-container:has(.August) {
+  background-image: url("https://img.freepik.com/free-vector/banner-with-aqua-park-with-swimming-pool-water-slides-palms_107791-6059.jpg?auto=format&h=200");
+  color: black;
+}
+
+.flex-container:has(.September) {
+  background-image: url("https://t4.ftcdn.net/jpg/00/92/07/89/360_F_92078974_eMXMiXtDX7KSmN6UcfBB5N1c7O14SZRw.jpg");
+  color: black;
+}
+
+.flex-container:has(.October) {
+  background-image: url("https://media.istockphoto.com/vectors/seamless-pattern-with-funny-silhouettes-of-pumpkins-vector-vector-id1039573390?k=20&m=1039573390&s=612x612&w=0&h=82bDog5OfWSTaxZNELbSlyh8vjn7ii8itj4N3AMFRas=");
+  color: black;
+}
+
+.flex-container:has(.November) {
   background-image: url("https://t3.ftcdn.net/jpg/04/40/03/38/360_F_440033879_EycRk7KSlYsNk6wdtvrqk3nRgMhIkWFp.jpg");
   color: white;
 }
+
+.flex-container:has(.December) {
+  background-image: url("https://i.pinimg.com/736x/cf/85/fe/cf85fef9c4d5a6bb8a7a528b7ef5fead--twitter-backgrounds-twitter-headers.jpg");
+  color: black;
+}
+
 
 .arrow {
   padding-top: 13px;
@@ -41,7 +94,8 @@
 
 .arrow:hover {
   cursor:pointer;
-  background: #bbb;
+  background-color: #bbb;
+  opacity: 70%;
 }
 
 #prevDate {
@@ -104,6 +158,17 @@
 #t{
     padding: 0 16px;
     background-color: rgb(155, 238, 155);
+}
+
+.clear-items {
+  height: 20px;
+  text-align: right;
+  font-weight: bold;
+  color: #0077ff;
+}
+
+.clear-items:hover {
+  cursor:pointer;
 }
 
 .task-box {

@@ -5,21 +5,8 @@ m = n.getMonth();
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 m = months[m];
 d = n.getDate();
-// changeClass();
 calDate.innerHTML = m + " " + d + ", " + y;
 changeClass();
-
-function changeClass() {
-    if (m == "October") {
-        calDate.className = "october";
-    }
-    if (m == "November") {
-        calDate.className = "november";
-    }
-    else {
-        calDate.className = "none";
-    }
-}
 
 const longMonths = ["January", "March", "May", "July", "August", "October", "December"];
 
@@ -39,7 +26,6 @@ function previous() {
         m = "December";
         d = 31;
         y = y - 1;
-        // changeClass();
         calDate.innerHTML = m + " " + d + ", " + y;
     }
     changeClass();
@@ -61,3 +47,8 @@ function next() {
     }
     changeClass();
 }
+
+function changeClass() {
+    calDate.className = m;
+}
+
