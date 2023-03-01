@@ -19,7 +19,9 @@ function previous() {
         let month = months.indexOf(m);
         m = months[(month - 1) % 12];
         if (longMonths.includes(m)) {d = 31;}
-        if (longMonths.includes(m) == false) {d = 30;}
+        if (longMonths.includes(m) == false && m != "February") {d = 30;}
+        if (m == "February" && y % 4 != 0) {d = 28;}
+        if (m == "February" && y % 4 == 0) {d = 29;}
         calDate.innerHTML = m + " " + d + ", " + y;
     }
     else {
@@ -32,7 +34,13 @@ function previous() {
 }
 
 function next() {
-    if (longMonths.includes(m) == false && d < 30) {
+    if (m == "February" && y % 4 != 0 && d < 28) {
+        d = d + 1;
+        calDate.innerHTML = m + " " + d + ", " + y;
+    } else if (m == "February" && y % 4 == 0 && d < 29) {
+        d = d + 1;
+        calDate.innerHTML = m + " " + d + ", " + y;
+    } else if (longMonths.includes(m) == false && m != "February" && d < 30) {
         d = d + 1;
         calDate.innerHTML = m + " " + d + ", " + y;
     } else if (longMonths.includes(m) && d < 31) {

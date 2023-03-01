@@ -17,7 +17,7 @@ spawnNotification();
 //   event.waitUntil(self.registration.showNotification(title, options));
 // });
 
-new Notification(title, options)
+// new Notification(title, options)
 
 function spawnNotification(body, title) {
     const notification = new Notification(title, { body });

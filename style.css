@@ -7,6 +7,12 @@
     z-index: 3;
 }
 
+/* .col{
+  overflow: auto;
+  resize: horizontal;
+  background: #ffd166;
+} */
+
 .container {
   max-width: 1350px;
 }
@@ -149,6 +155,10 @@
 #s{
   padding: 0 16px;
   background-color: bisque;
+  overflow: auto;
+  resize: horizontal;
+  flex-grow: 1;
+  z-index: 10;
 }
 
 .scheduling{
