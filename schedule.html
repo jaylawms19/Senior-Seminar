@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
-    <script src="extensions/resizable/bootstrap-table-resizable.js"></script>
     <script src="confetti.js"></script>
     <!-- <script src="calendar.js"></script> -->
     <title>Portable Planner</title>
@@ -16,25 +15,6 @@
     <div class="container-lg" id="title">
         <a id="main-menu" href="welcome.html">MAIN MENU</a>
         P O R T A B L E P L A N N E R
-        <!-- <div class="colorchange"> -->
-            <!-- <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span> -->
-            <!-- <button onclick="mainTheme()" class="button button1 true"></button>
-            <button onclick="officeTheme()" class="button button2 false"></button>
-            <button onclick="fantasyTheme()" class="button button3 false"></button>
-            <button onclick="earthTheme()" class="button button4 false"></button> -->
-
-            <!-- <select name="theme-select" id="theme-select">
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-                <option value="blue">Blue</option>
-                <option value="pink">Pink</option>
-                <option value="space">Space</option>
-                <option value="nyan">Nyan</option>
-                </select> -->
-        <!-- </div> -->
       </div>
       <div class="calendar">
         <div class="flex-container">
@@ -141,65 +121,7 @@
             </div>
             <hr>
           </div>
-          <div class="col" id="t">
-              <div class="sec-title">
-                <b>To-Do List</b>
-              </div>
-            <br>
-            <div class="additem">
-                <input type="text" id="todo" placeholder="Add item">
-                <span onclick="newElement()" class="addBtn">Add</span>
-            </div>
-            <!-- <div class="clear-items">
-                <span onclick="clear()" class="clearBtn">Clear list</span>
-            </div> -->
-            <div class="itemlist">
-                <ul class="task-box" id="list">
-                    <li class="task">
-                        <label id="1">
-                            <input type="checkbox" class= "checkbox" id="1">
-                            <p>read 10 pages</p>
-                        </label>
-                        <span onclick="removeElement()" class="close">×</span>
-                    </li>
-                    <li class="task">
-                        <label id="1">
-                            <input type="checkbox" class= "checkbox" id="1">
-                            <p>email professor</p>
-                        </label>
-                        <span onclick="removeElement()" class="close">×</span>
-                    </li>
-                    <li class="task">
-                        <label id="1">
-                            <input type="checkbox" class= "checkbox" id="1">
-                            <p>write essay</p>
-                        </label>
-                        <span onclick="removeElement()" class="close">×</span>
-                    </li>
-                    <li class="task">
-                        <label id="1">
-                            <input type="checkbox" class= "checkbox" id="1">
-                            <p>watch Ted Talk</p>
-                        </label>
-                        <span onclick="removeElement()" class="close">×</span>
-                    </li>
-                </ul>
-                <div class="clear-items">
-                    <span onclick="clearAll()" class="clearBtn">Clear list</span>
-                </div>
-            </div>
-          </div>
-          <div class="col" id="n">
-            <div class="sec-title">
-                <b>Notes</b>
-              </div>
-            <br>
-            <textarea id="freeform" name="freeform" rows="20" cols="50" placeholder="What's on your mind?"></textarea>
-            <br>
-          </div>
-        </div>
-      </div>
-</body>
-<script src="calendar.js"></script>
-<script src="notification.js"></script>
-</html>
+        </body>
+        <script src="calendar.js"></script>
+        <!-- <script src="notification.js"></script> -->
+        </html>

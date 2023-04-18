@@ -7,11 +7,106 @@
     z-index: 3;
 }
 
-/* .col{
+#title {
+  text-align-last: center;
+  padding-right: 80px;
+}
+
+#main-menu {
+  /* text-align: left; */
+  float: left;
+  color: black;
+  /* display: inline-block; */
+}
+
+.button {
+  border: black;
+  padding: 13px;
+  display: inline-block;
+  margin: 4px 2px;
+  border-radius: 50%;
+}
+
+.button1 {
+  background: radial-gradient(#ffe4c4, #9bee9b);
+}
+
+.button2 {
+  background: radial-gradient(#000000, #ffff);
+}
+
+.button3 {
+  background: radial-gradient(#f00dac, #b603fd);
+}
+
+.button4 {
+  background: radial-gradient(#0044ff, #05861b);
+}
+
+:root,
+    :root.light {
+    --bg-color: #fff;
+    --text-color: #123;
+    }
+    :root.dark {
+    --bg-color: #121212;
+    --text-color: #696d7d;
+    }
+    :root.blue {
+    --bg-color: #05396B;
+    --text-color: #E7F1FE;
+    }
+    :root.pink {
+    --bg-color: #ffcad4;
+    --text-color: #e75480;
+    }
+    :root.space {
+    --bg-color: #000;
+    --text-color: #f2bd16;
+    --bg-url: url(//space);
+    --font-family: 'Press Start 2P', cursive;
+    }
+    :root.nyan {
+    --bg-color: #013367;
+    --text-color: #fff;
+    --bg-url: url(//nyan);
+    --font-family: 'Comic Neue', cursive;
+    }
+
+select {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  font-family: inherit;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 0.25rem;
+  }
+
+
+/* body {
+    margin: 0;
+    background-color: var(--bg-color);
+    background-image: var(--bg-url);
+    color: var(--text-color);
+    font-family: var(--font-family, "Open Sans", sans-serif);
+    } */
+    
+/* .dot {
+  height: 17px;
+  width: 17px;
+  background: radial-gradient(#ffe4c4, #9bee9b);
+  border-radius: 50%;
+  display: inline-block;
+  border-color: black;
+  border-width: 10px;
+} */
+
+.col{
   overflow: auto;
   resize: horizontal;
+  flex-grow: 1;
   background: #ffd166;
-} */
+}
 
 .container {
   max-width: 1350px;
@@ -123,7 +218,7 @@
   position: absolute;
   top: 111px;
   z-index: 2;
-  background: bisque;
+  background: #ffe4c4;
   width: 418px;
   height: 55px;
   text-align: center;
@@ -134,7 +229,7 @@
   position:absolute;
   top: 111px;
   z-index: 2;
-  background: rgb(155, 238, 155);
+  background: #9bee9b;
   width: 418px;
   height: 55px;
   text-align: center;
@@ -168,6 +263,9 @@
 #t{
     padding: 0 16px;
     background-color: rgb(155, 238, 155);
+    overflow: auto;
+    resize: horizontal;
+    flex-grow: 1;
 }
 
 .clear-items {
@@ -268,6 +366,9 @@ input {
 #n{
     padding: 0 16px;
     background-color:lavender;
+    overflow: auto;
+    resize: horizontal;
+    flex-grow: 1;
 }
 
 #freeform{
