@@ -19,13 +19,6 @@
   /* display: inline-block; */
 }
 
-.button {
-  border: black;
-  padding: 13px;
-  display: inline-block;
-  margin: 4px 2px;
-  border-radius: 50%;
-}
 
 .button1 {
   background: radial-gradient(#ffe4c4, #9bee9b);
@@ -220,7 +213,7 @@ select {
   z-index: 2;
   background: #ffe4c4;
   width: 418px;
-  height: 55px;
+  height: 50px;
   text-align: center;
   padding-top: 14px;
 }
@@ -231,7 +224,7 @@ select {
   z-index: 2;
   background: #9bee9b;
   width: 418px;
-  height: 55px;
+  height: 50px;
   text-align: center;
   padding-top: 14px;
 }
@@ -242,7 +235,7 @@ select {
   z-index: 2;
   background: lavender;
   width: 418px;
-  height: 55px;
+  height: 50px;
   text-align: center;
   padding-top: 14px;
 }
@@ -268,15 +261,15 @@ select {
     flex-grow: 1;
 }
 
-.clear-items {
+.pendingText {
   height: 20px;
-  text-align: right;
-  font-weight: bold;
-  color: #0077ff;
+  /* text-align: left; */
+  /* font-weight: bold; */
+  color: black;
 }
 
-.clear-items:hover {
-  cursor:pointer;
+.clear-items {
+  text-align: right;
 }
 
 .task-box {
@@ -339,6 +332,7 @@ input {
   width: 25%;
   background: #fdf902;
   color: rgb(85, 85, 85);
+  font-weight: bold;
   float: left;
   text-align: center;
   font-size: 16px;
@@ -361,6 +355,24 @@ input {
 .close:hover {
   background-color: #f44336;
   color: white;
+}
+
+.clearBtn {
+  border: none;
+  background-color: rgb(139, 139, 139);
+  color: white;
+  font-weight: bold;
+  padding: 6px;
+  display: inline-block;
+  margin: 14px 2px;
+  border-radius: 10%;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.clear-items button.active{
+  opacity: 1;
+  pointer-events: auto;
 }
 
 #n{

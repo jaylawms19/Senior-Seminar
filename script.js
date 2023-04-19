@@ -1,11 +1,11 @@
-var myNodelist = document.getElementsByTagName("li");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
+// var myNodelist = document.getElementsByTagName("li");
+// var i;
+// for (i = 0; i < myNodelist.length; i++) {
+//   var span = document.createElement("SPAN");
+//   var txt = document.createTextNode("\u00D7");
+//   span.appendChild(txt);
+//   myNodelist[i].appendChild(span);
+// }
 
 // starting the confetti animation when task is completed
 const start = () => {
@@ -21,21 +21,21 @@ const stop = () => {
   }, 1000); // stops after 3 second
 };
 
-var close = document.getElementsByClassName("close");
+// var close = document.getElementsByClassName("close");
 
-// Removes list items when you click X
-function removeElement() {
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-      start();
-      stop();
-    }
-  }
-}
+// // Removes list items when you click X
+// function removeElement() {
+//   for (i = 0; i < close.length; i++) {
+//     close[i].onclick = function() {
+//       var div = this.parentElement;
+//       div.style.display = "none";
+//       start();
+//       stop();
+//     }
+//   }
+// }
 
-let todos = JSON.parse(localStorage.getItem("todo-list"));
+// let todos = JSON.parse(localStorage.getItem("todo-list"));
 // taskBox = document.querySelector(".task-box");
 
 
@@ -60,7 +60,21 @@ let todos = JSON.parse(localStorage.getItem("todo-list"));
 // }
 // showTodo();
 
+// var numOfTasks = document.getElementById("list").value;
+// console.log("the number of tasks is ", numOfTasks);
+
+
+// const taskBox = document.querySelector(".task-box");
+// showTasks();
+
 // Pressing ENTER on the keyboard will add the task to the list
+// const inputBox = document.querySelector(".additem input");
+// const addBtn = document.querySelector(".additem span");
+const taskBox = document.querySelector(".task-box");
+const clearListBtn = document.querySelector(".clear-items button");
+showTasks();
+
+
 function pressEnt(event) {
   var x = event.code;
   if(x == "Enter") {
@@ -68,9 +82,14 @@ function pressEnt(event) {
   }    
 }
 
+// addBtn.onclick = () => {
+
+// }
+
 
 // Clicking on the "Add" button adds a new list item
 function newElement() {
+  // showTasks();
   var li = document.createElement("li");
   li.className = "task";
   var label = document.createElement("label");
@@ -81,34 +100,49 @@ function newElement() {
   var t = document.createTextNode(inputValue);
   var taskName = document.createElement("p");
   var checkboxEl = document.createElement("input");
+  // showTasks();
   checkboxEl.type = "checkbox";
   checkboxEl.className = "checkbox";
   checkboxEl.id = "1";
   label.appendChild(checkboxEl);
   taskName.appendChild(t);
   label.appendChild(taskName);
+  // showTasks();
+
+  let getLocalStorage = localStorage.getItem("New Todo");
+  if(getLocalStorage == null) {
+    listArr = [];
+  } else {
+      listArr = JSON.parse(getLocalStorage);
+  }
+  listArr.push(inputValue);
+  localStorage.setItem("New Todo", JSON.stringify(listArr));
+  // showTasks();
+
   if (inputValue === '') {
     alert("Your to-do goal cannot be left blank");
   } else {
-    console.log(inputValue);
+    // console.log(inputValue);
     // let todos = JSON.parse(localStorage.getItem("todo-list"));
-    if (!todos) {
-      todos = [];
-    }
-    let taskInfo = {name: inputValue, status: "pending"};
-    todos.push(taskInfo);
-    localStorage.setItem("todo-list", JSON.stringify(todos));
+
+    // if (!todos) {
+    //   todos = [];
+    // }
+    // let taskInfo = {name: inputValue, status: "pending"};
+    // todos.push(taskInfo);
+    // localStorage.setItem("todo-list", JSON.stringify(todos));
     document.getElementById("list").appendChild(li);
     // showTodo();
+    showTasks();
   }
   document.getElementById("todo").value = "";
 // show close button and deletes a list item when clicked
   var span = document.createElement("SPAN");
-  console.log("close button");
   var txt = document.createTextNode("\u00D7");
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
+  // numOfTasks++;
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
@@ -120,12 +154,56 @@ function newElement() {
   }
 }
 
-function clearAll() {
-  console.log("clear clicked");
-  document.getElementById("list").innerHTML = "";
+// function clearAll() {
+//   console.log("clear clicked");
+//   document.getElementById("list").innerHTML = "";
+// }
+
+// add task list inside ul
+function showTasks(){
+  let getLocalStorage = localStorage.getItem("New Todo");
+  if(getLocalStorage == null) {
+    listArr = [];
+  } else {
+      listArr = JSON.parse(getLocalStorage);
+  }
+  let newLiTag = '';
+  const pendingNum = document.querySelector(".pendingNum");
+  pendingNum.textContent = listArr.length;
+  if(listArr.length > 0){
+    clearListBtn.classList.add("active");
+  } else {
+    clearListBtn.classList.remove("active");
+  }
+  listArr.forEach((element, index) => {
+    newLiTag += `<li class="task"><label id="1"><input type="checkbox" class= "checkbox" id="1"><p>${element}</p></label><span onclick="removeElement(${index})" class="close">×</span></li>`;
+  });
+  console.log("taskBox", taskBox);
+  taskBox.innerHTML = newLiTag; //adding new li tag inside ul tag
+  inputValue = "";
 }
 
+// Removes list items when you click X
+function removeElement(index) {
+  let getLocalStorage = localStorage.getItem("New Todo");
+  listArr = JSON.parse(getLocalStorage);
+  listArr.splice(index, 1);
+  localStorage.setItem("New Todo", JSON.stringify(listArr));
+  showTasks();
+  start();
+  stop();
+}
 
+clearListBtn.onclick = () => {
+  listArr = [];
+  localStorage.setItem("New Todo", JSON.stringify(listArr));
+  showTasks();
+}
+
+// var numOfTasks = document.getElementById("list").length;
+// console.log("todos ", todos);
+// console.log("todos.value ", todos.value);
+// console.log("the number of tasks is ", todos.length);
 
 
 
