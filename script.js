@@ -60,6 +60,15 @@ let todos = JSON.parse(localStorage.getItem("todo-list"));
 // }
 // showTodo();
 
+// Pressing ENTER on the keyboard will add the task to the list
+function pressEnt(event) {
+  var x = event.code;
+  if(x == "Enter") {
+      newElement();
+  }    
+}
+
+
 // Clicking on the "Add" button adds a new list item
 function newElement() {
   var li = document.createElement("li");
